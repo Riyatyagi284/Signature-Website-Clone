@@ -1,3 +1,7 @@
+.menu-btns {
+    display: none;
+}
+
 .sidebar {
     display: none;
 }
@@ -43,49 +47,50 @@
     transition: all 0.4s ease;
 }
 
-#header-section {
+.nav-wrapper {
     display: flex;
     align-items: center;
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    right: 0; */
     width: 100%;
     overflow: hidden;
     z-index: 999;
     transition: all 0.4s ease;
     height: 80px;
+    background-image: url("../../assets/home/firstbg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-#header-section ul {
+.nav-wrapper ul {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5.5rem;
     position: absolute;
     right: 3%;
-    top: -16%;
+    top: 0%;
     transition: all 0.4s ease;
 }
 
-#header-section ul li {
+.nav-wrapper ul li {
     position: relative;
 }
 
-#header-section ul li:nth-child(4) {
+.nav-wrapper ul li:nth-child(4) {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
 }
 
-#header-section ul li a {
+.nav-wrapper ul li a {
     text-transform: uppercase;
     position: relative;
-    font-weight: 600;
+    font-weight: 900;
+    text-decoration: none;
+    color: #01432b;
 }
 
-#header-section ul li a::before {
+.nav-wrapper ul li a::before {
     content: "";
     position: absolute;
     left: 0;
@@ -98,7 +103,7 @@
     transition: transform 0.4s ease-out;
 }
 
-#header-section ul li a:hover {
+.nav-wrapper ul li a:hover {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
@@ -107,4 +112,63 @@
     position: absolute;
     top: -59%;
     left: -40%;
+}
+
+
+
+
+@media (max-width: 993px) {
+    .menu-btns {
+        display: block;
+    }
+
+    /* .nav-wrapper ul {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        top: 7rem;
+        background: url("../../assets/greenbg.svg");
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+    } */
+
+    .nav-wrapper ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        /* top: 7rem; */
+        background: url("/src/assets/greenbg.svg");
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-right: -3%;
+        opacity: 0.96;
+    }
+
+    .nav-wrapper ul li a {
+        text-transform: uppercase;
+        /* position: relative; */
+        position: absolute;
+        z-index: 6;
+        color: #fff;
+        font-weight: 900;
+        text-decoration: none;
+        /* color: #01432b; */
+    }
+
+    .logo>img {
+        left: 229px;
+    }
+
+    .logo::after {
+        display: none;
+    }
+
+    .logo::before {
+        display: none;
+    }
+
 }

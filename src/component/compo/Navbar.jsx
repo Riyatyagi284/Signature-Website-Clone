@@ -1,87 +1,69 @@
-import React, { useState, useEffect } from 'react'
-import "../compoStyle/Navbar.css"
+import React, { useState } from 'react'
 import Logo from "../../assets/logo.svg"
+import { navLinks } from "../../constant"
+import close from "../../assets/close.svg"
+import menu from "../../assets/menu.svg"
 import Line4 from "../../assets/header/Line4.webp"
 import InstaLogo from "../../assets/header/instalogo.webp"
+import "../compoStyle/Navbar.css"
 
-const Navbar = () => {
-  const [didScroll, setDidScroll] = useState(false);
-  const [lastScrollTop, setLastScrollTop] = useState(0);
-  const delta = 5;
-  const [navbarHeight, setNavbarHeight] = useState(0);
-  const [scrollDirection,setScrollDirection] = useState('scroll-down');
-
-  // Height of navbar on component mount
-  useEffect(() => {
-    const headerElement = document.getElementById('header-section')
-    if (headerElement) {
-      setNavbarHeight(headerElement.getBoundingClientRect().height);
-    }
-  }, []);
-
-  // Height of navbar on scroll
-  useEffect(() => {
-     const handleScroll = () => {
-      setDidScroll(true);
-     };
-
-     window.addEventListener('scroll',handleScroll);
-
-     return () => {
-      window.removeEventListener('scroll',handleScroll)
-     };
-  },[])
-
-  // Handle scrolling using useEffect hook with didScroll dependency
-
-  useEffect(() => {
-    function hasScrolled() {
-      const st = window.scrollY;
-
-      if(Math.abs(lastScrollTop - st) <= delta) return;
-
-      if(st > lastScrollTop && st > navbarHeight){
-        setScrollDirection('scroll-up')
-      }else{
-        setScrollDirection('scroll-down')
-      }
-      setLastScrollTop(st);
-    setDidScroll(false);
-    }
-
-   if (didScroll) {
-    hasScrolled();
-   }
-    
-  }, [didScroll, lastScrollTop, navbarHeight])
-
-
-
+const Nav = () => {
+  const [active, setActive] = useState("Home")
+  const [toggle, setToggle] = useState(false)
 
   return (
     <>
-      <header id="header-section">
+      <nav className='nav-wrapper'>
         <div className="logo">
-          <img src={Logo} alt="logo" />
+        <img src={Logo} alt="Signature" />
+        </div>
+        {/* ##########this code is for desktop screen############## */}
+        <ul className="nav-lists">
+          {
+            navLinks.map((nav, index) => {
+              return <li key={nav.id} className={`nav-list ${active === nav.title ? "text-white" : "text-dimWhite"} 
+                ${index === navLinks.length - 1 ? "last-list" : "other-list"}`}
+                onClick={() => setActive(nav.title)}
+              >
+                {
+                  index === navLinks.length - 1 ? (
+                    <>
+                      <img src={Line4} alt="" className="line-4" />
+                      <img src={InstaLogo} alt="" className='insta-logo' />
+                      <a href="/" className='bebas'>{nav.title}</a>
+                    </>
+                  ) : (<a href={`#{nav.id}`} className='bebas'>{nav.title}</a>)
+                }
+              </li>
+            })
+          }
+        </ul>
+
+        {/* ###############this code is for small screens################ */}
+        <div className="menu-btns" style={{cursor:"pointer"}}>
+          <img src={toggle ? close : menu} alt="menu" className='menu' onClick={() => setToggle(!toggle)} />
         </div>
 
-        <ul>
-          <li><a href="/" className='bebas'>our story</a></li>
-
-          <li><a href="#second-section" className='bebas master-blender'>master blender</a></li>
-
-          <li><a href="/" className='bebas'>recipes</a></li>
-
-          <li>
-            <img src={Line4} alt="Line1" className='line-4' />
-            <img src={InstaLogo} alt="Line1" className='insta-logo' />
-            <a href="/" className='bebas'>instagram</a>
-          </li>
-
-        </ul>
-      </header>
+        {/* <ul className="desktop-list-items">
+          {
+            navLinks.map((nav, index) => {
+              <li key={nav.id} className={`nav-list ${active === nav.title ? "text-white" : "text-dimWhite"} ${index === navLinks.length - 1 ? "last-list" : "other-list"}`}>
+                {
+                  index === navLinks.length - 1 ? (
+                    <>
+                      <img src={Line4} alt="" className="line-4" />
+                      <img src={InstaLogo} alt="" className='insta-logo' />
+                      <a href="/" className='bebas'>{nav.title}</a>
+                    </>
+                  ) : (<a href={`#{nav.id}`} className='bebas'>{nav.title}</a>)
+                }
+              </li>
+            })
+          }
+        </ul> */}
+      </nav>
     </>
   )
 }
 
-export default Navbar
+export default Nav
