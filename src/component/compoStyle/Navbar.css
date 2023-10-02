@@ -52,10 +52,11 @@
     align-items: center;
     width: 100%;
     overflow: hidden;
-    z-index: 999;
+    position: relative;
+    z-index: 9999!important;
     transition: all 0.4s ease;
     height: 80px;
-    background-image: url("../../assets/home/firstbg.svg");
+    background-image: url("/src/assets/home/firstbg.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
