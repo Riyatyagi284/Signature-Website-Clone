@@ -1,0 +1,73 @@
+#sixth-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#sixth-section .container {
+    width: 100%;
+    height: 100vh;
+}
+
+.sixth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    height: 100%;
+    width: 60%;
+    padding-bottom: 100px;
+}
+
+.top-img {
+    margin-left: 60px;
+}
+
+.sixth-container h2 {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.sixth-container p {
+    width: 421px;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+
+.sixthBottomLeft {
+    position: absolute;
+    bottom: 10%;
+    left: 24%;
+}
+
+.PlayBtn {
+    position: absolute;
+    bottom: 20%;
+    left: 41%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.SixthTop {
+    position: absolute;
+    top: 29%;
+    left: 43%;
+}
+
+.SixthBottomRight {
+    position: absolute;
+    bottom: 40%;
+    right: 37%;
+}
+
+.SixthBottomRight2 {
+    position: absolute;
+    bottom: 2%;
+    right: 30%;
+}

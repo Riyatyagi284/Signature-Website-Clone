@@ -1,0 +1,66 @@
+#home-section .home-container {
+    height: 100vh;
+    position: relative;
+}
+.home-first-bg{
+    width: 100%;
+}
+.bg-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.bottom-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    object-fit: cover;
+}
+
+.symbol-img {
+    position: absolute;
+    bottom: 34%;
+    right: 16%;
+}
+
+#home-section .content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+}
+
+#home-section .text-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+}
+
+#home-section .text-section h1 {
+    width: 356px;
+}
+
+.leaf {
+    height: 100%;
+}
+
+.leaf img {
+    left: 10px;
+}
+
+#home-section .text-section p {
+    width: 421px;
+    margin: 15px 0;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 1);
+}
+
+#home-section .text-section button:hover {
+    background-color: #abde63;
+    color: #01432b;
+}

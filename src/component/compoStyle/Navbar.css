@@ -1,0 +1,110 @@
+.sidebar {
+    display: none;
+}
+
+.logo>img {
+    width: 151px;
+    height: 46px;
+    position: relative;
+    left: 95px;
+    transition: all 0.4s ease;
+}
+
+.logo {
+    transition: all 0.4s ease;
+    position: relative;
+    top: 19%;
+    left: 0;
+    width: 100%;
+}
+
+.logo::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 22px;
+    width: 90px;
+    height: 1px;
+    background: #01432b4d;
+    transition: all 0.4s ease;
+    margin-right: 1rem;
+}
+
+.logo::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -255px;
+    bottom: 22px;
+    width: 100%;
+    height: 1px;
+    background: #01432b4d;
+    transition: all 0.4s ease;
+}
+
+#header-section {
+    display: flex;
+    align-items: center;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; */
+    width: 100%;
+    overflow: hidden;
+    z-index: 999;
+    transition: all 0.4s ease;
+    height: 80px;
+}
+
+#header-section ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5.5rem;
+    position: absolute;
+    right: 3%;
+    top: -16%;
+    transition: all 0.4s ease;
+}
+
+#header-section ul li {
+    position: relative;
+}
+
+#header-section ul li:nth-child(4) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+#header-section ul li a {
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 600;
+}
+
+#header-section ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 100%;
+    background: #01432b;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-out;
+}
+
+#header-section ul li a:hover {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.line4 {
+    position: absolute;
+    top: -59%;
+    left: -40%;
+}

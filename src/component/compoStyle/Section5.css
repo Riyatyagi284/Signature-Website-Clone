@@ -1,0 +1,61 @@
+.fifth-container .left {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.fifth-container .left h2 {
+    width: 422px;
+}
+
+.fifth-container .left span {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 0.5rem 0;
+}
+
+.fifth-container .left p {
+    width: 400px;
+}
+
+.fifth-container .right {
+    position: relative;
+    height: 100vh;
+}
+
+.fifth-container .right img,
+video {
+    position: absolute;
+}
+
+.fifth-container .right img:nth-child(1) {
+    top: 10%;
+    z-index: 1;
+    left: -23%;
+}
+
+.fifth-container .right video {
+    right: 36%;
+    top: 26%;
+    width: 328px;
+    height: 329px;
+    object-fit: cover;
+}
+
+.fifth-container .right img:nth-child(3) {
+    bottom: 5%;
+    left: -30%;
+}
+
+.fifth-container .right img:nth-child(4) {
+    bottom: 26%;
+    left: -22%;
+}
+
+.fifth-container .right img:nth-child(5) {
+    bottom: 0%;
+    right: 10%;
+}

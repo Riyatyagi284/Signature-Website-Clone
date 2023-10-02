@@ -1,0 +1,50 @@
+.seventh-container {
+    height: 100vh;
+}
+
+.seventh-container .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.seventh-container .content p {
+    text-align: center;
+    width: 421px;
+    margin: 0auto;
+    padding: 1rem 0;
+}
+
+.seventh-container>img {
+    position: absolute;
+}
+
+.arrow {
+    bottom: 27%;
+    right: 50%;
+    z-index: 1;
+}
+
+.seventh-container .top-left {
+    top: 24%;
+    left: 22%;
+}
+
+.seventh-container .top-right {
+    top: 5%;
+    right: 8%;
+}
+
+.seventh-container .bottom-left {
+    bottom: 3%;
+    left: 19%;
+}
+
+.seventh-container .bottom-right {
+    bottom: 10px;
+    right: 24%;
+}
