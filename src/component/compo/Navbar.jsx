@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Logo from "../../assets/logo.svg"
-import { navLinks } from "../../constant"
+import navLinks from "../../Constant"
+// import { navLinks } from "../../constant"
 import close from "../../assets/close.svg"
 import menu from "../../assets/menu.svg"
 import Line4 from "../../assets/header/Line4.webp"
