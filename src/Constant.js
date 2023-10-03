@@ -1,4 +1,4 @@
-export const navLinks = [
+const navLinks = [
     {
         id:"our Story",
         title:"OUR STORY"
@@ -16,3 +16,5 @@ export const navLinks = [
         title:"INSTAGRAM",
     }
 ]
+
+export default navLinks; 
