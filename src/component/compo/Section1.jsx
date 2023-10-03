@@ -1,18 +1,26 @@
 import React from 'react'
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react'
 import HomeFirstBg from "../../assets/home/firstbg.svg"
 import Leaf from "../../assets/home/leaf.svg"
 import HomeSymbol from "../../assets/home/symbol.svg" 
 import HomeBottom from "../../assets/home/bottom.webp"
 import "../compoStyle/Section1.css"
 
+
 const Section1 = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
      <>
        <section id="home-section" className="section common-section">
         <div className="home-container">
             <img src={HomeFirstBg}  className='home-first-bg' alt="HomeBgImg" />
             <div className="content container">
-                <div className="text-section">
+                <div className="text-section" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="20">
                     <h1 className='text-white common-heading-1'>CRAFTED FROM NATURE 
                     <span className='position-relative'><img src={Leaf} alt="leaf" className='position-absolute'/></span></h1>
 
@@ -23,7 +31,7 @@ const Section1 = () => {
               Martin, it is truly unique, full of character & bound to leave a lasting signature. Taste of Nature in a
               Glass!</p>
 
-              <img src={HomeSymbol} alt="symbol" className='symbol-img' />
+              <img src={HomeSymbol} alt="symbol" className='symbol-img' data-aos="slide-up" data-aos-duration="1000" data-aos-delay="30" />
               <button className="bg-deepgreen text-lightgreen common-btn">VIEW RECIPES</button>
                 </div>
             </div>

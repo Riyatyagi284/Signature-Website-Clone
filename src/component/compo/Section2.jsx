@@ -1,4 +1,7 @@
 import React from 'react'
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react'
 import Sign from "../../assets/second/sign.webp"
 import CarouselTopLeft from "../../assets/carousel-image-1/carousel-1-top-left.webp"
 import CarouselTopRight from "../../assets/carousel-image-1/carousel-1-top-right.webp"
@@ -30,7 +33,7 @@ const Section2 = () => {
                         <div className="second-container">
                             <div className="row">
                                 <div className="col-xl-5">
-                                    <div className="left position-relative">
+                                    <div className="left position-relative" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="50">
                                         <h2 className='text-lightgreen common-heading-1'>the signature of our master blender</h2>
                                         <p className='common-p text-whitealter'>In the skilled hands of Louise Martin, our Master Blender, the new
                                             Signature attains a level of perfection that is truly remarkable. Her meticulous craftsmanship infuses

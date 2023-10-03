@@ -1,6 +1,7 @@
 #home-section .home-container {
     height: 100vh;
     position: relative;
+    z-index: 0;
 }
 .home-first-bg{
     width: 100%;

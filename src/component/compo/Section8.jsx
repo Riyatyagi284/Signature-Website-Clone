@@ -1,4 +1,6 @@
-import React from 'react';
+import React,{useEffect} from 'react'
+import Aos from "aos";
+import "aos/dist/aos.css";
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import "../compoStyle/Section8.css";
@@ -9,6 +11,9 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 const Section8 = () => {
+    useEffect(() => {
+        Aos.init();
+      }, []);
     return (
         <>
             <section id="eighth-section" className="section common-section">
@@ -38,7 +43,7 @@ const Section8 = () => {
                                         }
                                       }} >
 
-                                    <div className="item">
+                                    <div className="item" data-aos="slide-up" data-aos-duration="1000" data-aos-delay="50">
                                         <div className="row">
                                             <div className="col-md-12 col-lg-6 col-12">
                                                 <div className="left tab-leftImg">
@@ -62,7 +67,7 @@ const Section8 = () => {
                                         </div>
                                     </div>
 
-                                    <div className='item'>
+                                    <div className='item' data-aos="slide-up" data-aos-duration="1000" data-aos-delay="50">
                                         <div className="row">
                                             <div className="col-md-12 col-lg-6 col-12">
                                                 <div className="left tab-leftImg">
@@ -109,7 +114,7 @@ const Section8 = () => {
                                     }
                                   }}>
 
-                                <div className="item">
+                                <div className="item" data-aos="slide-up" data-aos-duration="1000" data-aos-delay="50">
                                     <div className="row">
                                         <div className="col-md-12 col-lg-6 col-12">
                                             <div className="left tab-leftImg">
@@ -135,7 +140,7 @@ const Section8 = () => {
                                     </div>
                                 </div>
 
-                                <div className='item'>
+                                <div className='item' data-aos="slide-up" data-aos-duration="1000" data-aos-delay="50">
                                     <div className="row">
                                         <div className="col-md-12 col-lg-6 col-12">
                                             <div className="left tab-leftImg">
@@ -179,7 +184,7 @@ const Section8 = () => {
                                     }
                                   }}>
 
-                                <div className="item">
+                                <div className="item" data-aos="slide-up" data-aos-duration="1000" data-aos-delay="50">
                                     <div className="row">
                                         <div className="col-md-12 col-lg-6 col-12">
                                             <div className="left tab-leftImg">
@@ -205,7 +210,7 @@ const Section8 = () => {
                                     </div>
                                 </div>
 
-                                <div className='item'>
+                                <div className='item' data-aos="slide-up" data-aos-duration="1000" data-aos-delay="50">
                                     <div className="row">
                                         <div className="col-md-12 col-lg-6 col-12">
                                             <div className="left tab-leftImg">

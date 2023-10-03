@@ -8,7 +8,8 @@ import Section5 from './component/compo/Section5'
 import Section6 from './component/compo/Section6'
 import Section7 from './component/compo/Section7'
 import Section8 from './component/compo/Section8'
-import Section9 from './component/compo/Section9'
+// import Section9 from './component/compo/Section9'
+// import Section10 from './component/compo/Section10'
 import Footer from "./component/compo/Footer.jsx"
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
       <Section7 />
       <Section8 />
       {/* <Section9 /> */}
+      {/* <Section10 /> */}
       <Footer />
     </>
   )

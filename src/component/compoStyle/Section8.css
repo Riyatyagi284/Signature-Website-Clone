@@ -21,6 +21,8 @@
     height: 85%;
     margin: auto;
     padding-top: 6rem;
+    position: relative;
+    z-index: 0;
 }
 
 .nav {
